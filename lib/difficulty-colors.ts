@@ -1,4 +1,11 @@
 export const getDifficultyColors = (difficulty: string) => {
+  if (!difficulty) {
+    return {
+      solid: "bg-gray-600 text-white",
+      light: "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
+    }
+  }
+  
   switch (difficulty.toLowerCase()) {
     case "beginner":
       return {

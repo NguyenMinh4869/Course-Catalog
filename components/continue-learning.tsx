@@ -25,51 +25,53 @@ export function ContinueLearning() {
         {/* Right Section - Course Cards */}
         <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
           {continueCourses.map((course) => (
-            <div key={course.id} className="bg-white dark:bg-[#111112] rounded-[16px] shadow-lg dark:shadow-2xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl dark:hover:shadow-2xl border border-gray-100 dark:border-[#333333] h-full">
+            <div key={course.id} className="group bg-white dark:bg-[#111112] rounded-[16px] shadow-lg dark:shadow-2xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] border border-gray-100 dark:border-[#333333] h-full">
               {/* Course Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={course.image || "/placeholder.svg"}
                   alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                 />
+                {/* Subtle overlay on hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 <div className="absolute top-3 right-3">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getDifficultyColors(course.difficulty).solid} transition-colors duration-300`}>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getDifficultyColors(course.difficulty).solid} transition-all duration-300 group-hover:scale-105 group-hover:shadow-md`}>
                     {course.difficulty}
                   </span>
                 </div>
               </div>
 
               {/* Course Content */}
-              <div className="p-4 flex flex-col flex-1 min-h-0">
+              <div className="p-4 flex flex-col flex-1 min-h-0 group-hover:bg-white/50 dark:group-hover:bg-[#111112]/50 transition-colors duration-300">
                 <div className="space-y-3 flex-1 min-h-0">
-                  <h3 className="font-bold text-lg text-[#111112] dark:text-white line-clamp-2 transition-colors duration-300">
+                  <h3 className="font-bold text-lg text-[#111112] dark:text-white line-clamp-2 transition-colors duration-300 group-hover:text-[#026a0d] dark:group-hover:text-[#026a0d]">
                     {course.title}
                   </h3>
-                  <p className="text-sm text-[#111112]/70 dark:text-gray-300 line-clamp-3 leading-relaxed transition-colors duration-300">
+                  <p className="text-sm text-[#111112]/70 dark:text-gray-300 line-clamp-3 leading-relaxed transition-colors duration-300 group-hover:text-[#111112]/80 dark:group-hover:text-gray-200">
                     {course.description}
                   </p>
                 </div>
                 
                 {/* Progress Section - Fixed at bottom */}
-                <div className="space-y-2 mt-4">
+                <div className="space-y-2 mt-4 group-hover:scale-[1.02] transition-transform duration-300 ease-out">
                   <div className="flex justify-between items-center">
-                    <span className="text-xs text-[#111112]/60 dark:text-gray-400 font-medium">
+                    <span className="text-xs text-[#111112]/60 dark:text-gray-400 font-medium group-hover:text-[#111112]/80 dark:group-hover:text-gray-300 transition-colors duration-300">
                       Progress
                     </span>
-                    <span className="text-xs text-[#111112] dark:text-white font-semibold">
+                    <span className="text-xs text-[#111112] dark:text-white font-semibold group-hover:text-[#026a0d] dark:group-hover:text-[#026a0d] transition-colors duration-300">
                       {course.progress}%
                     </span>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 group-hover:h-3 transition-all duration-300">
                     <div 
-                      className="bg-[#026a0d] h-2.5 rounded-full transition-all duration-300"
+                      className="bg-[#026a0d] h-2.5 group-hover:h-3 rounded-full transition-all duration-300 group-hover:shadow-sm"
                       style={{ width: `${course.progress}%` }}
                     ></div>
                   </div>
                 </div>
                 
-                <button className="w-full bg-[#026a0d] dark:bg-[#026a0d] hover:bg-[#026a0d]/90 dark:hover:bg-[#026a0d]/80 text-white font-medium py-2 px-4 rounded-full transition-all duration-300 mt-4 hover:shadow-lg">
+                <button className="w-full bg-[#026a0d] dark:bg-[#026a0d] hover:bg-[#026a0d]/90 dark:hover:bg-[#026a0d]/80 text-white font-medium py-2 px-4 rounded-full transition-all duration-300 mt-4 hover:shadow-lg group-hover:scale-105 group-hover:shadow-xl">
                   Continue Learning
                 </button>
               </div>

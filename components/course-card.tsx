@@ -15,7 +15,7 @@ export function CourseCard({ course }: CourseCardProps) {
   const difficultyColors = getDifficultyColors(course.difficulty)
 
   return (
-    <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card">
+    <Card className="group hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 ease-out border-border bg-card overflow-hidden">
       <CardHeader className="p-0">
         <div className="relative overflow-hidden rounded-t-lg">
           <Image
@@ -23,47 +23,54 @@ export function CourseCard({ course }: CourseCardProps) {
             alt={course.title}
             width={300}
             height={200}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
           />
+          {/* Subtle overlay on hover */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
           <div className="absolute top-3 left-3">
-            <Badge className={difficultyColors.solid}>{course.difficulty}</Badge>
+            <Badge className={`${difficultyColors.solid} group-hover:scale-105 transition-transform duration-300 ease-out shadow-sm`}>
+              {course.difficulty}
+            </Badge>
           </div>
         </div>
       </CardHeader>
 
-      <CardContent className="p-4 space-y-3">
-        <h3 className="font-bold font-[family-name:var(--font-montserrat)] text-card-foreground line-clamp-2">
+      <CardContent className="p-4 space-y-3 group-hover:bg-card/50 transition-colors duration-300">
+        <h3 className="font-bold font-[family-name:var(--font-montserrat)] text-card-foreground line-clamp-2 group-hover:text-primary transition-colors duration-300">
           {course.title}
         </h3>
 
-        <p className="text-sm text-muted-foreground font-[family-name:var(--font-open-sans)] line-clamp-3">
+        <p className="text-sm text-muted-foreground font-[family-name:var(--font-open-sans)] line-clamp-3 group-hover:text-muted-foreground/80 transition-colors duration-300">
           {course.description}
         </p>
 
         <div className="flex items-center gap-4 text-xs text-muted-foreground">
-          <div className="flex items-center gap-1">
-            <Clock className="h-3 w-3" />
-            <span>{course.duration}</span>
+          <div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300 ease-out">
+            <Clock className="h-3 w-3 group-hover:text-primary transition-colors duration-300" />
+            <span className="group-hover:text-foreground transition-colors duration-300">{course.duration}</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Users className="h-3 w-3" />
-            <span>1.2k students</span>
+          <div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300 ease-out">
+            <Users className="h-3 w-3 group-hover:text-primary transition-colors duration-300" />
+            <span className="group-hover:text-foreground transition-colors duration-300">1.2k students</span>
           </div>
         </div>
 
         {course.enrolled && course.progress !== undefined && (
-          <div className="space-y-2">
+          <div className="space-y-2 group-hover:scale-[1.02] transition-transform duration-300 ease-out">
             <div className="flex justify-between text-xs">
-              <span className="text-muted-foreground">Progress</span>
-              <span className="font-medium text-foreground">{course.progress}%</span>
+              <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">Progress</span>
+              <span className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">{course.progress}%</span>
             </div>
-            <Progress value={course.progress} className="h-2" />
+            <Progress 
+              value={course.progress} 
+              className="h-2 group-hover:h-2.5 transition-all duration-300 ease-out" 
+            />
           </div>
         )}
       </CardContent>
 
-      <CardFooter className="p-4 pt-0">
-        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium" size="sm">
+      <CardFooter className="p-4 pt-0 group-hover:bg-card/30 transition-colors duration-300">
+        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium group-hover:scale-105 group-hover:shadow-lg transition-all duration-300 ease-out" size="sm">
           {course.enrolled ? "Continue" : "Start Learning"}
         </Button>
       </CardFooter>
