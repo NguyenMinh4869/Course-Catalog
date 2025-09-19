@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container mx-auto px-4 py-8 space-y-12">
+      <main className="container mx-auto px-4 py-6 sm:py-8 space-y-8 sm:space-y-12">
         <CourseCatalog />
         <ContinueLearning />
       </main>

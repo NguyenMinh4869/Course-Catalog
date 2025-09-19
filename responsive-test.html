@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Test - Sonic Course Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .breakpoint {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .breakpoint h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .breakpoint p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .grid-demo {
+            display: grid;
+            gap: 16px;
+            margin: 10px 0;
+        }
+        .grid-demo.mobile { grid-template-columns: 1fr; }
+        .grid-demo.tablet { grid-template-columns: repeat(2, 1fr); }
+        .grid-demo.desktop { grid-template-columns: repeat(3, 1fr); }
+        .grid-demo.large { grid-template-columns: repeat(4, 1fr); }
+        
+        .card {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #bbdefb;
+        }
+        
+        .header-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 10px 0;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        .header-demo.desktop {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo { background: #ffeb3b; padding: 10px; border-radius: 3px; }
+        .search { background: #4caf50; padding: 10px; border-radius: 3px; flex: 1; }
+        .theme { background: #ff9800; padding: 10px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🎯 Sonic Course Catalog - Responsive Design Test</h1>
+        
+        <div class="breakpoint">
+            <h3>📱 Mobile (320px - 640px)</h3>
+            <p>• Header: Logo, Search, Theme stacked vertically</p>
+            <p>• Course grid: 1 column</p>
+            <p>• Continue Learning: 1 column</p>
+            <p>• Smaller padding and font sizes</p>
+            
+            <div class="header-demo">
+                <div class="logo">Logo (Small)</div>
+                <div class="search">Search Bar (Full Width)</div>
+                <div class="theme">Theme Toggle</div>
+            </div>
+            
+            <div class="grid-demo mobile">
+                <div class="card">Course 1</div>
+                <div class="card">Course 2</div>
+                <div class="card">Course 3</div>
+            </div>
+        </div>
+        
+        <div class="breakpoint">
+            <h3>📱 Tablet (640px - 1024px)</h3>
+            <p>• Header: Logo, Search, Theme in row</p>
+            <p>• Course grid: 2 columns</p>
+            <p>• Continue Learning: 2 columns</p>
+            <p>• Medium padding and font sizes</p>
+            
+            <div class="header-demo desktop">
+                <div class="logo">Logo (Medium)</div>
+                <div class="search">Search Bar (Flexible)</div>
+                <div class="theme">Theme Toggle</div>
+            </div>
+            
+            <div class="grid-demo tablet">
+                <div class="card">Course 1</div>
+                <div class="card">Course 2</div>
+                <div class="card">Course 3</div>
+                <div class="card">Course 4</div>
+            </div>
+        </div>
+        
+        <div class="breakpoint">
+            <h3>💻 Desktop (1024px - 1280px)</h3>
+            <p>• Header: Logo, Search, Theme in row</p>
+            <p>• Course grid: 3 columns</p>
+            <p>• Continue Learning: 3 columns</p>
+            <p>• Larger padding and font sizes</p>
+            
+            <div class="header-demo desktop">
+                <div class="logo">Logo (Large)</div>
+                <div class="search">Search Bar (Max Width)</div>
+                <div class="theme">Theme Toggle</div>
+            </div>
+            
+            <div class="grid-demo desktop">
+                <div class="card">Course 1</div>
+                <div class="card">Course 2</div>
+                <div class="card">Course 3</div>
+                <div class="card">Course 4</div>
+                <div class="card">Course 5</div>
+                <div class="card">Course 6</div>
+            </div>
+        </div>
+        
+        <div class="breakpoint">
+            <h3>🖥️ Large Desktop (1280px+)</h3>
+            <p>• Header: Logo, Search, Theme in row</p>
+            <p>• Course grid: 4 columns</p>
+            <p>• Continue Learning: 3 columns</p>
+            <p>• Maximum padding and font sizes</p>
+            
+            <div class="header-demo desktop">
+                <div class="logo">Logo (XL)</div>
+                <div class="search">Search Bar (Max Width)</div>
+                <div class="theme">Theme Toggle</div>
+            </div>
+            
+            <div class="grid-demo large">
+                <div class="card">Course 1</div>
+                <div class="card">Course 2</div>
+                <div class="card">Course 3</div>
+                <div class="card">Course 4</div>
+                <div class="card">Course 5</div>
+                <div class="card">Course 6</div>
+                <div class="card">Course 7</div>
+                <div class="card">Course 8</div>
+            </div>
+        </div>
+        
+        <div class="breakpoint">
+            <h3>✅ Responsive Features Implemented</h3>
+            <p>• <strong>Flexible Grid System:</strong> 1 → 2 → 3 → 4 columns based on screen size</p>
+            <p>• <strong>Responsive Header:</strong> Stacked on mobile, row on desktop</p>
+            <p>• <strong>Adaptive Logo:</strong> Scales from 20x20 to 32x32</p>
+            <p>• <strong>Flexible Search:</strong> Full width on mobile, constrained on desktop</p>
+            <p>• <strong>Responsive Typography:</strong> Scales from text-xl to text-3xl</p>
+            <p>• <strong>Adaptive Spacing:</strong> Smaller gaps on mobile, larger on desktop</p>
+            <p>• <strong>Mobile-First Approach:</strong> Base styles for mobile, enhanced for larger screens</p>
+        </div>
+    </div>
+</body>
+</html>

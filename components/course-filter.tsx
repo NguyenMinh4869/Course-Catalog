@@ -3,8 +3,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { X } from "lucide-react"
-
-type Difficulty = "All" | "Beginner" | "Intermediate" | "Advanced" | "Expert"
+import { Difficulty } from "@/types/course"
 
 interface CourseFilterProps {
   selectedDifficulty: Difficulty
@@ -46,7 +45,7 @@ export function CourseFilter({ selectedDifficulty, onDifficultyChange, courseCou
       </Button>
 
       {isOpen && (
-        <div className="absolute right-0 top-10 z-50 w-64 bg-popover border border-border rounded-lg shadow-lg p-4">
+        <div className="absolute right-0 top-10 z-50 w-64 sm:w-72 bg-popover border border-border rounded-lg shadow-lg p-4">
           <div className="flex items-center justify-between mb-3">
             <h3 className="font-semibold text-sm">Filter by Difficulty</h3>
             <Button
