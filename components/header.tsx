@@ -18,7 +18,7 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
   }
   
   return (
-    <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fast-theme-transition">
       <div className="container mx-auto px-4 py-2">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo Section */}

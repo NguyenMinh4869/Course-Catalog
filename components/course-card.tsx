@@ -15,7 +15,7 @@ export function CourseCard({ course }: CourseCardProps) {
   const difficultyColors = getDifficultyColors(course.difficulty)
 
   return (
-    <Card className="group theme-transition hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 ease-out border-border bg-card overflow-hidden">
+    <Card className="group course-card-transition hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 border-border bg-card overflow-hidden">
       <CardHeader className="p-0">
         <div className="relative overflow-hidden rounded-t-lg">
           <Image

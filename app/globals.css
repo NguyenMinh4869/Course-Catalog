@@ -125,39 +125,43 @@
     @apply bg-background text-foreground;
   }
   
-  /* Theme transition animations - optimized for faster text transitions */
+  /* Theme transition animations - optimized for faster text color changes */
   * {
-    transition: background-color 0.2s ease-in-out, 
-                border-color 0.2s ease-in-out, 
-                color 0.15s ease-in-out,
-                box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-out, 
+                border-color 0.2s ease-out, 
+                color 0.15s ease-out,
+                box-shadow 0.2s ease-out;
   }
   
   /* Smooth transitions for theme-specific elements */
   html {
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-out;
   }
   
-  /* Enhanced transitions for interactive elements - faster text */
+  /* Enhanced transitions for interactive elements - faster text color changes */
   button, 
   input, 
   textarea, 
   select {
-    transition: background-color 0.2s ease-in-out, 
-                border-color 0.2s ease-in-out, 
-                color 0.1s ease-in-out,
-                box-shadow 0.2s ease-in-out,
-                transform 0.2s ease-in-out;
+    transition: background-color 0.2s ease-out, 
+                border-color 0.2s ease-out, 
+                color 0.1s ease-out,
+                box-shadow 0.2s ease-out,
+                transform 0.2s ease-out;
   }
   
-  /* Card and container transitions - faster text */
+  /* Card and container transitions - optimized */
   [class*="card"], 
   [class*="container"], 
   [class*="panel"] {
-    transition: background-color 0.2s ease-in-out, 
-                border-color 0.2s ease-in-out, 
-                color 0.1s ease-in-out,
-                box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-out, 
+                border-color 0.2s ease-out, 
+                box-shadow 0.2s ease-out;
+  }
+  
+  /* Text-specific fast transitions */
+  h1, h2, h3, h4, h5, h6, p, span, div, a {
+    transition: color 0.1s ease-out;
   }
   
   /* Custom theme transition animations */
@@ -188,25 +192,10 @@
     animation: theme-fade-in 0.5s ease-out;
   }
   
-  /* Enhanced hover effects for theme-aware elements */
+  /* Enhanced hover effects for theme-aware elements - faster theme transitions */
   .theme-transition {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  /* Fast text transitions for better theme switching */
-  h1, h2, h3, h4, h5, h6, 
-  p, span, div, 
-  .text-foreground, 
-  .text-muted-foreground,
-  .text-card-foreground {
-    transition: color 0.1s ease-in-out !important;
-  }
-  
-  /* Even faster transitions for critical text elements */
-  .font-bold, 
-  .font-semibold, 
-  .font-medium {
-    transition: color 0.08s ease-in-out !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.1s ease-out;
   }
   
   .theme-transition:hover {
@@ -221,13 +210,39 @@
                 0 10px 10px -5px rgba(0, 0, 0, 0.1);
   }
   
-  /* Instant text transition utility class */
-  .instant-text-transition {
-    transition: color 0.05s ease-in-out !important;
+  /* Ultra-fast text color transitions for theme switching */
+  .fast-theme-transition {
+    transition: color 0.05s ease-out !important;
   }
   
-  /* Optimize theme switching performance */
-  .theme-switching {
-    will-change: color, background-color;
+  /* Optimized transitions for specific components */
+  .course-card-transition {
+    transition: background-color 0.2s ease-out,
+                border-color 0.2s ease-out,
+                box-shadow 0.2s ease-out,
+                color 0.1s ease-out,
+                transform 0.2s ease-out;
+  }
+  
+  /* Header and navigation fast transitions */
+  header, nav, [role="navigation"] {
+    transition: background-color 0.15s ease-out,
+                color 0.08s ease-out,
+                border-color 0.15s ease-out;
+  }
+  
+  /* Disable transitions during theme switching for instant color changes */
+  .theme-switching * {
+    transition: none !important;
+  }
+  
+  /* Optimized transitions for text elements */
+  .text-transition {
+    transition: color 0.08s ease-out;
+  }
+  
+  /* Background transitions */
+  .bg-transition {
+    transition: background-color 0.2s ease-out;
   }
 }
