@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1758353837396" clover="3.2.0">
-  <project timestamp="1758353837396" name="All files">
-    <metrics statements="89" coveredstatements="86" conditionals="43" coveredconditionals="40" methods="28" coveredmethods="26" elements="160" coveredelements="152" complexity="0" loc="89" ncloc="89" packages="2" files="9" classes="9"/>
+<coverage generated="1758376701942" clover="3.2.0">
+  <project timestamp="1758376701942" name="All files">
+    <metrics statements="140" coveredstatements="131" conditionals="63" coveredconditionals="55" methods="51" coveredmethods="41" elements="254" coveredelements="227" complexity="0" loc="140" ncloc="140" packages="2" files="10" classes="10"/>
     <package name="components">
-      <metrics statements="76" coveredstatements="73" conditionals="37" coveredconditionals="34" methods="26" coveredmethods="24"/>
+      <metrics statements="127" coveredstatements="118" conditionals="57" coveredconditionals="49" methods="49" coveredmethods="39"/>
       <file name="continue-learning.tsx" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\components\continue-learning.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="28" count="90" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="28" count="45" type="stmt"/>
       </file>
       <file name="course-card.tsx" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\components\course-card.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="14" count="50" type="stmt"/>
-        <line num="15" count="80" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="14" count="205" type="stmt"/>
+        <line num="15" count="148" type="stmt"/>
       </file>
       <file name="course-catalog.tsx" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\components\course-catalog.tsx">
-        <metrics statements="25" coveredstatements="25" conditionals="16" coveredconditionals="16" methods="11" coveredmethods="11"/>
+        <metrics statements="40" coveredstatements="35" conditionals="19" coveredconditionals="17" methods="19" coveredmethods="12"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="39" type="stmt"/>
-        <line num="18" count="39" type="stmt"/>
-        <line num="19" count="33" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="60" type="cond" truecount="3" falsecount="0"/>
-        <line num="27" count="33" type="stmt"/>
-        <line num="29" count="84" type="stmt"/>
-        <line num="30" count="84" type="stmt"/>
-        <line num="31" count="84" type="stmt"/>
-        <line num="32" count="84" type="stmt"/>
-        <line num="34" count="33" type="stmt"/>
-        <line num="38" count="39" type="stmt"/>
-        <line num="39" count="39" type="stmt"/>
-        <line num="42" count="39" type="cond" truecount="1" falsecount="0"/>
-        <line num="43" count="17" type="stmt"/>
-        <line num="44" count="68" type="cond" truecount="3" falsecount="0"/>
-        <line num="51" count="39" type="cond" truecount="1" falsecount="0"/>
-        <line num="52" count="18" type="stmt"/>
-        <line num="55" count="39" type="stmt"/>
-        <line num="92" count="89" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="78" type="stmt"/>
+        <line num="19" count="78" type="stmt"/>
+        <line num="22" count="78" type="stmt"/>
+        <line num="23" count="33" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="60" type="cond" truecount="3" falsecount="0"/>
+        <line num="31" count="33" type="stmt"/>
+        <line num="33" count="84" type="stmt"/>
+        <line num="34" count="84" type="stmt"/>
+        <line num="35" count="84" type="stmt"/>
+        <line num="36" count="84" type="stmt"/>
+        <line num="38" count="33" type="stmt"/>
+        <line num="42" count="78" type="stmt"/>
+        <line num="43" count="39" type="stmt"/>
+        <line num="46" count="39" type="cond" truecount="1" falsecount="0"/>
+        <line num="47" count="17" type="stmt"/>
+        <line num="48" count="68" type="cond" truecount="3" falsecount="0"/>
+        <line num="55" count="39" type="cond" truecount="1" falsecount="0"/>
+        <line num="56" count="18" type="stmt"/>
+        <line num="59" count="39" type="stmt"/>
+        <line num="63" count="78" type="stmt"/>
+        <line num="64" count="78" type="stmt"/>
+        <line num="65" count="78" type="stmt"/>
+        <line num="66" count="78" type="stmt"/>
+        <line num="69" count="78" type="stmt"/>
+        <line num="70" count="39" type="stmt"/>
+        <line num="106" count="178" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="147" count="0" type="stmt"/>
       </file>
       <file name="course-filter.tsx" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\components\course-filter.tsx">
         <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="5"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="72" type="stmt"/>
-        <line num="19" count="72" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="30" type="stmt"/>
+        <line num="17" count="88" type="stmt"/>
+        <line num="19" count="88" type="stmt"/>
         <line num="20" count="155" type="cond" truecount="5" falsecount="0"/>
         <line num="22" count="31" type="stmt"/>
         <line num="24" count="31" type="stmt"/>
@@ -87,6 +102,45 @@
         <line num="17" count="1" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
       </file>
+      <file name="load-more-catalog.tsx" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\components\load-more-catalog.tsx">
+        <metrics statements="36" coveredstatements="35" conditionals="17" coveredconditionals="14" methods="15" coveredmethods="14"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="18" count="29" type="stmt"/>
+        <line num="19" count="29" type="stmt"/>
+        <line num="22" count="29" type="stmt"/>
+        <line num="23" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="40" type="cond" truecount="3" falsecount="0"/>
+        <line num="31" count="13" type="stmt"/>
+        <line num="33" count="105" type="stmt"/>
+        <line num="34" count="105" type="stmt"/>
+        <line num="35" count="105" type="stmt"/>
+        <line num="36" count="105" type="stmt"/>
+        <line num="38" count="13" type="stmt"/>
+        <line num="42" count="29" type="stmt"/>
+        <line num="43" count="13" type="stmt"/>
+        <line num="46" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="40" type="cond" truecount="3" falsecount="0"/>
+        <line num="55" count="13" type="cond" truecount="0" falsecount="1"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="59" count="13" type="stmt"/>
+        <line num="63" count="29" type="stmt"/>
+        <line num="64" count="29" type="stmt"/>
+        <line num="67" count="29" type="stmt"/>
+        <line num="68" count="13" type="stmt"/>
+        <line num="71" count="29" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="108" count="204" type="stmt"/>
+        <line num="136" count="1" type="stmt"/>
+      </file>
       <file name="theme-provider.tsx" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\components\theme-provider.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
@@ -99,29 +153,29 @@
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="8" type="stmt"/>
         <line num="7" count="8" type="stmt"/>
-        <line num="10" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="5" type="cond" truecount="1" falsecount="1"/>
       </file>
     </package>
     <package name="lib">
       <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="difficulty-colors.ts" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\lib\difficulty-colors.ts">
         <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="1" count="19" type="stmt"/>
-        <line num="2" count="19" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="136" type="stmt"/>
+        <line num="2" count="136" type="cond" truecount="1" falsecount="0"/>
         <line num="3" count="4" type="stmt"/>
-        <line num="9" count="15" type="cond" truecount="5" falsecount="0"/>
-        <line num="11" count="5" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
+        <line num="9" count="132" type="cond" truecount="5" falsecount="0"/>
+        <line num="11" count="39" type="stmt"/>
+        <line num="16" count="29" type="stmt"/>
+        <line num="21" count="45" type="stmt"/>
+        <line num="26" count="17" type="stmt"/>
         <line num="31" count="2" type="stmt"/>
       </file>
       <file name="utils.ts" path="C:\Users\Admin\Desktop\Projects\Course-Catalog\lib\utils.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="22" type="stmt"/>
-        <line num="5" count="22" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="758" type="stmt"/>
+        <line num="5" count="758" type="stmt"/>
       </file>
     </package>
   </project>
