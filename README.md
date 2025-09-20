@@ -56,8 +56,11 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 - NFT Marketplaces
 - Blockchain Fundamentals
 
+## Links
+
+- **Live Demo**: [https://course-catalog-pi.vercel.app/](https://course-catalog-pi.vercel.app/)
+- **Figma Design**: [https://www.figma.com/design/LNwLbU71rEpSwj6GB2bQoG/Course-Catalog?node-id=6-4&t=asL6Me7jeETIgOH7-0](https://www.figma.com/design/LNwLbU71rEpSwj6GB2bQoG/Course-Catalog?node-id=6-4&t=asL6Me7jeETIgOH7-0)
+
 ## License
 
 Private project - All rights reserved.
-=======
-Link Deploy : https://course-catalog-pi.vercel.app/
