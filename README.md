@@ -4,7 +4,7 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 
 ## Features
 
--  **Course Catalog**: Browse blockchain and DeFi courses
+-  **Course Catalog**: Browse courses
 -  **Search & Filter**: Find courses by difficulty level and keywords
 -  **Dark/Light Theme**: Toggle between themes
 -  **Responsive Design**: Works on desktop, tablet, and mobile
@@ -47,14 +47,7 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
 
-## Course Topics
 
-- Smart Contract Development
-- DeFi Protocols & Yield Farming
-- dApp Development
-- Network Architecture
-- NFT Marketplaces
-- Blockchain Fundamentals
 
 ## License
 
