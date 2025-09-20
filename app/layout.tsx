@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "Learn blockchain and DeFi development with Sonic",
   generator: "v0.app",
   icons: {
-    icon: '/Logo main.png', // Sử dụng logo của bạn
+    icon: '/Logo main.png', 
   },
 }
 
