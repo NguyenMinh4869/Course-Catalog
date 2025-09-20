@@ -40,7 +40,7 @@ export default function RootLayout({
         className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${montserrat.variable} ${openSans.variable}`}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             {children}
           </ThemeProvider>
           <Analytics />

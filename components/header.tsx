@@ -26,7 +26,7 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
             <img    
               src={theme === "dark" ? "/Logo DarkMode.png" : "/Logo.png"} 
               alt="Sonic Logo" 
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
             />
           </div>
 

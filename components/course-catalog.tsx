@@ -87,9 +87,15 @@ export function CourseCatalog({ searchQuery }: CourseCatalogProps) {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {filteredCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 transition-all duration-500 ease-in-out">
+          {filteredCourses.map((course, index) => (
+            <div 
+              key={course.id} 
+              className="animate-in fade-in-0 slide-in-from-bottom-4 duration-500"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <CourseCard course={course} />
+            </div>
           ))}
         </div>
       )}
