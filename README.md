@@ -62,4 +62,3 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 Private project - All rights reserved.
 =======
 Link Deploy : https://course-catalog-pi.vercel.app/
->>>>>>> ea23f1e6402d3e41bfb0ae6d21b691f74e5d801c
