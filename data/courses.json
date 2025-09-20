@@ -70,5 +70,77 @@
     "difficulty": "Expert",
     "duration": "12 weeks",
     "enrolled": false
+  },
+  {
+    "id": 9,
+    "title": "Blockchain Security Fundamentals",
+    "description": "Learn essential security practices for blockchain development and smart contract auditing.",
+    "image": "/placeholder-1zv9a.png",
+    "difficulty": "Intermediate",
+    "duration": "4 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 10,
+    "title": "Web3 Integration Patterns",
+    "description": "Master the art of integrating Web3 functionality into traditional web applications.",
+    "image": "/placeholder-5z5py.png",
+    "difficulty": "Advanced",
+    "duration": "5 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 11,
+    "title": "Cryptocurrency Trading Strategies",
+    "description": "Develop profitable trading strategies and risk management techniques for crypto markets.",
+    "image": "/placeholder-8flea.png",
+    "difficulty": "Beginner",
+    "duration": "3 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 12,
+    "title": "NFT Marketplace Development",
+    "description": "Build your own NFT marketplace with minting, trading, and auction features.",
+    "image": "/placeholder-8l1hy.png",
+    "difficulty": "Advanced",
+    "duration": "6 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 13,
+    "title": "Cross-Chain Bridge Technology",
+    "description": "Understand and implement cross-chain communication protocols and bridge solutions.",
+    "image": "/placeholder-bqvgd.png",
+    "difficulty": "Expert",
+    "duration": "8 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 14,
+    "title": "Decentralized Identity Systems",
+    "description": "Explore DID (Decentralized Identity) protocols and self-sovereign identity solutions.",
+    "image": "/placeholder-c4itc.png",
+    "difficulty": "Intermediate",
+    "duration": "4 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 15,
+    "title": "Layer 2 Scaling Solutions",
+    "description": "Learn about rollups, sidechains, and other Layer 2 scaling technologies.",
+    "image": "/placeholder-decd4.png",
+    "difficulty": "Advanced",
+    "duration": "5 weeks",
+    "enrolled": false
+  },
+  {
+    "id": 16,
+    "title": "Governance Token Economics",
+    "description": "Design and implement governance mechanisms for decentralized organizations.",
+    "image": "/placeholder-dxiqb.png",
+    "difficulty": "Expert",
+    "duration": "7 weeks",
+    "enrolled": false
   }
 ]

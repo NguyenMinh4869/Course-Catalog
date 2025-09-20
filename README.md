@@ -4,8 +4,10 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 
 ## Features
 
--  **Course Catalog**: Browse courses
+-  **Course Catalog**: Browse courses with pagination support
 -  **Search & Filter**: Find courses by difficulty level and keywords
+-  **Pagination**: Handle large course catalogs efficiently (8 courses per page)
+-  **Load More**: Alternative loading pattern for better UX
 -  **Dark/Light Theme**: Toggle between themes
 -  **Responsive Design**: Works on desktop, tablet, and mobile
 -  **Modern UI**: Built with Next.js 14 and Tailwind CSS

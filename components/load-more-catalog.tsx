@@ -5,18 +5,18 @@ import { CourseFilter } from "@/components/course-filter"
 import { Course, Difficulty } from "@/types/course"
 import coursesData from "@/data/courses.json"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const courses: Course[] = coursesData
-const COURSES_PER_PAGE = 8
+const INITIAL_COURSES_COUNT = 8
+const LOAD_MORE_COUNT = 4
 
-interface CourseCatalogProps {
+interface LoadMoreCatalogProps {
   searchQuery: string
 }
 
-export function CourseCatalog({ searchQuery }: CourseCatalogProps) {
+export function LoadMoreCatalog({ searchQuery }: LoadMoreCatalogProps) {
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>("All")
-  const [currentPage, setCurrentPage] = useState(1)
+  const [visibleCoursesCount, setVisibleCoursesCount] = useState(INITIAL_COURSES_COUNT)
 
   // Calculate course counts for each difficulty (based on search results)
   const courseCounts = useMemo(() => {
@@ -59,16 +59,18 @@ export function CourseCatalog({ searchQuery }: CourseCatalogProps) {
     return filtered
   }, [searchQuery, selectedDifficulty])
 
-  // Pagination logic
-  const totalPages = Math.ceil(filteredCourses.length / COURSES_PER_PAGE)
-  const startIndex = (currentPage - 1) * COURSES_PER_PAGE
-  const endIndex = startIndex + COURSES_PER_PAGE
-  const paginatedCourses = filteredCourses.slice(startIndex, endIndex)
+  // Get visible courses
+  const visibleCourses = filteredCourses.slice(0, visibleCoursesCount)
+  const hasMoreCourses = visibleCoursesCount < filteredCourses.length
 
-  // Reset to page 1 when filters change
+  // Reset visible count when filters change
   useMemo(() => {
-    setCurrentPage(1)
+    setVisibleCoursesCount(INITIAL_COURSES_COUNT)
   }, [searchQuery, selectedDifficulty])
+
+  const handleLoadMore = () => {
+    setVisibleCoursesCount(prev => Math.min(prev + LOAD_MORE_COUNT, filteredCourses.length))
+  }
 
   return (
     <section>
@@ -102,7 +104,7 @@ export function CourseCatalog({ searchQuery }: CourseCatalogProps) {
       ) : (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 transition-all duration-500 ease-in-out">
-            {paginatedCourses.map((course, index) => (
+            {visibleCourses.map((course, index) => (
               <div 
                 key={course.id} 
                 className="animate-in fade-in-0 slide-in-from-bottom-4 duration-500"
@@ -113,51 +115,31 @@ export function CourseCatalog({ searchQuery }: CourseCatalogProps) {
             ))}
           </div>
 
-          {/* Pagination Controls */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-8 sm:mt-12">
+          {/* Load More Button */}
+          {hasMoreCourses && (
+            <div className="flex justify-center mt-8 sm:mt-12">
               <Button
+                onClick={handleLoadMore}
                 variant="outline"
-                size="sm"
-                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                disabled={currentPage === 1}
-                className="flex items-center gap-1"
+                size="lg"
+                className="px-8 py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                <ChevronLeft className="h-4 w-4" />
-                Previous
-              </Button>
-
-              <div className="flex items-center gap-1">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setCurrentPage(page)}
-                    className="w-8 h-8 p-0"
-                  >
-                    {page}
-                  </Button>
-                ))}
-              </div>
-
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                disabled={currentPage === totalPages}
-                className="flex items-center gap-1"
-              >
-                Next
-                <ChevronRight className="h-4 w-4" />
+                Load More Courses ({filteredCourses.length - visibleCoursesCount} remaining)
               </Button>
             </div>
           )}
 
-          {/* Page Info */}
-          {totalPages > 1 && (
-            <div className="text-center mt-4 text-sm text-muted-foreground">
-              Showing {startIndex + 1}-{Math.min(endIndex, filteredCourses.length)} of {filteredCourses.length} courses
+          {/* Show All Button when there are hidden courses */}
+          {hasMoreCourses && (
+            <div className="text-center mt-4">
+              <Button
+                onClick={() => setVisibleCoursesCount(filteredCourses.length)}
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                Show All {filteredCourses.length} Courses
+              </Button>
             </div>
           )}
         </>
