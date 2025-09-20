@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sonic Course Catalog
 
 A modern, responsive course catalog application for learning blockchain and DeFi development on the Sonic platform.
