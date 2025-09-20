@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Sonic - Course Catalog",
   description: "Learn blockchain and DeFi development with Sonic",
   generator: "v0.app",
+  icons: {
+    icon: '/Logo main.png', // Sử dụng logo của bạn
+  },
 }
 
 export default function RootLayout({
