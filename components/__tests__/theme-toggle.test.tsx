@@ -113,3 +113,4 @@ describe('ThemeToggle', () => {
     expect(mockSetTheme).toHaveBeenNthCalledWith(3, 'dark')
   })
 })
+

@@ -25,7 +25,7 @@ jest.mock('next/image', () => ({
 }))
 
 // Mock UI components
-jest.mock('../../ui/card', () => ({
+jest.mock('@/components/ui/card', () => ({
   Card: ({ children, className, ...props }: any) => (
     <div data-testid="card" className={className} {...props}>
       {children}
@@ -48,7 +48,7 @@ jest.mock('../../ui/card', () => ({
   ),
 }))
 
-jest.mock('../../ui/button', () => ({
+jest.mock('@/components/ui/button', () => ({
   Button: ({ children, className, ...props }: any) => (
     <button 
       data-testid="button" 
@@ -60,7 +60,7 @@ jest.mock('../../ui/button', () => ({
   ),
 }))
 
-jest.mock('../../ui/badge', () => ({
+jest.mock('@/components/ui/badge', () => ({
   Badge: ({ children, className, ...props }: any) => (
     <span data-testid="badge" className={className} {...props}>
       {children}
@@ -68,7 +68,7 @@ jest.mock('../../ui/badge', () => ({
   ),
 }))
 
-jest.mock('../../ui/progress', () => ({
+jest.mock('@/components/ui/progress', () => ({
   Progress: ({ value, className, ...props }: any) => (
     <div 
       data-testid="progress" 
@@ -379,3 +379,4 @@ describe('CourseCard', () => {
     })
   })
 })
+
