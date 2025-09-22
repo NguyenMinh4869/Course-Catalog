@@ -18,8 +18,8 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 - **Framework**: Next.js 14
 - **Styling**: Tailwind CSS
 - **UI Components**: Radix UI
-- **Testing**: Jest + React Testing Library
-- **TypeScript**: Full type safety
+- **Testing**
+- **TypeScript**
 - **Fonts**: Geist, Montserrat, Open Sans
 
 ## Getting Started
