@@ -3,15 +3,14 @@ import { Search, X } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { useTheme } from "next-themes"
+ 
 
 interface HeaderProps {
-  searchQuery: string
-  onSearchChange: (query: string) => void
+  searchQuery: string //gia tri search hien tai
+  onSearchChange: (query: string) => void //function update search query
 }
 
 export function Header({ searchQuery, onSearchChange }: HeaderProps) {
-  const { theme } = useTheme()
   
   const handleClearSearch = () => {
     onSearchChange("")
@@ -23,16 +22,24 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo Section */}
           <div className="flex items-center flex-shrink-0 relative">
-            <img    
-              src={theme === "dark" ? "/Logo DarkMode.png" : "/Logo.png"} 
-              alt="Sonic Logo" 
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
+            {/* Light logo */}
+            <img
+              src="/Logo.png"
+              alt="Sonic Logo"
+              className="block dark:hidden w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
+            />
+            {/* Dark logo */}
+            <img
+              src="/Logo DarkMode.png"
+              alt="Sonic Logo"
+              className="hidden dark:block w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
             />
           </div>
 
           {/* Search Section */}
           <div className="flex-1 w-full sm:max-w-lg sm:mx-4 lg:mx-8">
             <div className="relative flex items-center">
+              {/* Search Icon */}
               <Search className="absolute left-3 h-4 w-4 text-muted-foreground" />
               <Input 
                 placeholder="Search courses..." 
