@@ -7,17 +7,17 @@ const continueCourses: Course[] = continueCoursesData
 
 export function ContinueLearning() {
   return (
-    <section className="bg-[#FDF8EE] dark:bg-[#111112] border border-[#8B4513] dark:border-[#333333] rounded-[20px] p-4 sm:p-6 lg:p-8 transition-colors duration-300">
+    <section className="bg-[#FDF8EE] dark:bg-[#111112] border border-[#8B4513] dark:border-[#333333] rounded-[20px] p-4 sm:p-6 lg:p-8 transition-[background-color,border-color] duration-200">
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         {/* Left Section - Text Content */}
         <div className="flex-1 lg:max-w-md">
-          <h2 className="text-xl sm:text-2xl font-black font-[family-name:var(--font-montserrat)] text-[#111112] dark:text-white mb-3 transition-colors duration-300">
+          <h2 className="text-xl sm:text-2xl font-black font-[family-name:var(--font-montserrat)] text-[#111112] dark:text-white mb-3">
             Continue Learning
           </h2>
-          <p className="text-sm text-[#111112]/70 dark:text-gray-300 mb-4 leading-relaxed transition-colors duration-300">
+          <p className="text-sm text-[#111112]/70 dark:text-gray-300 mb-4 leading-relaxed">
             Keep progressing through personalized courses selected for you
           </p>
-          <button className="text-sm text-[#111112] dark:text-blue-400 hover:text-[#111112]/80 dark:hover:text-blue-300 underline transition-colors duration-300">
+          <button className="text-sm text-[#111112] dark:text-blue-400 hover:text-[#111112]/80 dark:hover:text-blue-300 underline">
             View All →
           </button>
         </div>
@@ -43,12 +43,12 @@ export function ContinueLearning() {
               </div>
 
               {/* Course Content */}
-              <div className="p-4 flex flex-col flex-1 min-h-0 group-hover:bg-white/50 dark:group-hover:bg-[#111112]/50 transition-colors duration-300">
+              <div className="p-4 flex flex-col flex-1 min-h-0 group-hover:bg-white/50 dark:group-hover:bg-[#111112]/50 transition-[background-color] duration-200">
                 <div className="space-y-3 flex-1 min-h-0">
-                  <h3 className="font-bold text-lg text-[#111112] dark:text-white line-clamp-2 transition-colors duration-300 group-hover:text-[#026a0d] dark:group-hover:text-[#026a0d]">
+                  <h3 className="font-bold text-lg text-[#111112] dark:text-white line-clamp-2 group-hover:text-[#026a0d] dark:group-hover:text-[#026a0d]">
                     {course.title}
                   </h3>
-                  <p className="text-sm text-[#111112]/70 dark:text-gray-300 line-clamp-3 leading-relaxed transition-colors duration-300 group-hover:text-[#111112]/80 dark:group-hover:text-gray-200">
+                  <p className="text-sm text-[#111112]/70 dark:text-gray-300 line-clamp-3 leading-relaxed group-hover:text-[#111112]/80 dark:group-hover:text-gray-200">
                     {course.description}
                   </p>
                 </div>
@@ -56,10 +56,10 @@ export function ContinueLearning() {
                 {/* Progress Section - Fixed at bottom */}
                 <div className="space-y-2 mt-4 group-hover:scale-[1.02] transition-transform duration-300 ease-out">
                   <div className="flex justify-between items-center">
-                    <span className="text-xs text-[#111112]/60 dark:text-gray-400 font-medium group-hover:text-[#111112]/80 dark:group-hover:text-gray-300 transition-colors duration-300">
+                    <span className="text-xs text-[#111112]/60 dark:text-gray-400 font-medium group-hover:text-[#111112]/80 dark:group-hover:text-gray-300">
                       Progress
                     </span>
-                    <span className="text-xs text-[#111112] dark:text-white font-semibold group-hover:text-[#026a0d] dark:group-hover:text-[#026a0d] transition-colors duration-300">
+                    <span className="text-xs text-[#111112] dark:text-white font-semibold group-hover:text-[#026a0d] dark:group-hover:text-[#026a0d]">
                       {course.progress}%
                     </span>
                   </div>

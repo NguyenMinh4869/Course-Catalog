@@ -19,15 +19,15 @@ export function CourseFilter({ selectedDifficulty, onDifficultyChange, courseCou
   const getDifficultyColor = (difficulty: Difficulty) => {
     switch (difficulty) {
       case "Beginner":
-        return "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
+        return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300"
       case "Intermediate":
-        return "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400"
+        return "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
       case "Advanced":
-        return "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400"
+        return "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300"
       case "Expert":
-        return "bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400"
+        return "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300"
       default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400"
+        return "bg-gray-100 text-gray-800 dark:bg-gray-800/50 dark:text-gray-200"
     }
   }
 
@@ -66,16 +66,22 @@ export function CourseFilter({ selectedDifficulty, onDifficultyChange, courseCou
                   onDifficultyChange(difficulty)
                   setIsOpen(false)
                 }}
-                className={`w-full flex items-center justify-between p-2 rounded-md text-left hover:bg-muted transition-colors ${
-                  selectedDifficulty === difficulty ? "bg-accent" : ""
+                className={`w-full flex items-center justify-between p-2 rounded-md text-left transition-[background-color,transform,box-shadow,border-color] duration-200 group ${
+                  selectedDifficulty === difficulty 
+                    ? "bg-accent text-accent-foreground" 
+                    : "hover:bg-muted/80 dark:hover:bg-white/10 dark:hover:shadow-sm hover:scale-[1.02] dark:hover:border-white/20"
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <Badge className={getDifficultyColor(difficulty)}>
+                  <Badge className={`${getDifficultyColor(difficulty)} group-hover:scale-105 transition-transform duration-200`}>
                     {difficulty}
                   </Badge>
                 </div>
-                <span className="text-sm text-muted-foreground">
+                <span className={`text-sm font-medium ${
+                  selectedDifficulty === difficulty 
+                    ? "text-accent-foreground" 
+                    : "text-foreground/80 dark:text-foreground/90 group-hover:text-foreground dark:group-hover:text-white"
+                }`}>
                   {courseCounts[difficulty]}
                 </span>
               </button>
