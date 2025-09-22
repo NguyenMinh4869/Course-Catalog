@@ -6,8 +6,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('Beginner')
       
       expect(result).toEqual({
-        solid: 'bg-green-600 text-white',
-        light: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+        solid: 'bg-green-600 text-white'
       })
     })
 
@@ -15,8 +14,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('Intermediate')
       
       expect(result).toEqual({
-        solid: 'bg-yellow-600 text-white',
-        light: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
+        solid: 'bg-yellow-600 text-white'
       })
     })
 
@@ -24,8 +22,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('Advanced')
       
       expect(result).toEqual({
-        solid: 'bg-orange-600 text-white',
-        light: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
+        solid: 'bg-orange-600 text-white'
       })
     })
 
@@ -33,8 +30,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('Expert')
       
       expect(result).toEqual({
-        solid: 'bg-red-600 text-white',
-        light: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+        solid: 'bg-red-600 text-white'
       })
     })
   })
@@ -44,8 +40,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('beginner')
       
       expect(result).toEqual({
-        solid: 'bg-green-600 text-white',
-        light: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+        solid: 'bg-green-600 text-white'
       })
     })
 
@@ -53,8 +48,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('EXPERT')
       
       expect(result).toEqual({
-        solid: 'bg-red-600 text-white',
-        light: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+        solid: 'bg-red-600 text-white'
       })
     })
 
@@ -62,8 +56,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('InTeRmEdIaTe')
       
       expect(result).toEqual({
-        solid: 'bg-yellow-600 text-white',
-        light: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
+        solid: 'bg-yellow-600 text-white'
       })
     })
   })
@@ -73,8 +66,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('Unknown')
       
       expect(result).toEqual({
-        solid: 'bg-gray-600 text-white',
-        light: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
+        solid: 'bg-gray-600 text-white'
       })
     })
 
@@ -82,8 +74,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors('')
       
       expect(result).toEqual({
-        solid: 'bg-gray-600 text-white',
-        light: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
+        solid: 'bg-gray-600 text-white'
       })
     })
 
@@ -91,8 +82,7 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors(null as any)
       
       expect(result).toEqual({
-        solid: 'bg-gray-600 text-white',
-        light: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
+        solid: 'bg-gray-600 text-white'
       })
     })
 
@@ -100,23 +90,20 @@ describe('getDifficultyColors', () => {
       const result = getDifficultyColors(undefined as any)
       
       expect(result).toEqual({
-        solid: 'bg-gray-600 text-white',
-        light: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
+        solid: 'bg-gray-600 text-white'
       })
     })
   })
 
   describe('Return value structure', () => {
-    it('always returns an object with solid and light properties', () => {
+    it('always returns an object with solid property', () => {
       const difficulties = ['Beginner', 'Intermediate', 'Advanced', 'Expert', 'Unknown', '']
       
       difficulties.forEach(difficulty => {
         const result = getDifficultyColors(difficulty)
         
         expect(result).toHaveProperty('solid')
-        expect(result).toHaveProperty('light')
         expect(typeof result.solid).toBe('string')
-        expect(typeof result.light).toBe('string')
       })
     })
 
@@ -127,13 +114,6 @@ describe('getDifficultyColors', () => {
       expect(result.solid).toContain('text-')
     })
 
-    it('light property contains background and text color classes for both light and dark modes', () => {
-      const result = getDifficultyColors('Beginner')
-      
-      expect(result.light).toContain('bg-')
-      expect(result.light).toContain('text-')
-      expect(result.light).toContain('dark:bg-')
-      expect(result.light).toContain('dark:text-')
-    })
+    // light variant removed
   })
 })

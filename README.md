@@ -50,12 +50,31 @@ A modern, responsive course catalog application for learning blockchain and DeFi
 - `npm run test:coverage` - Run tests with coverage report
 
 
+## Structure
+
+```text
+.
+├─ app/                # Next.js App Router pages/layouts and global styles
+├─ components/         # UI components and feature modules (catalog, filter, cards)
+├─ data/               # JSON data sources for courses and continue-learning
+├─ lib/                # Utilities and shared helpers (colors, utils)
+├─ hooks/              # Custom React hooks
+├─ types/              # TypeScript types/interfaces
+├─ public/             # Static assets (images, icons)
+├─ scripts/            # Development scripts
+├─ __tests__/          # Test docs and notes
+├─ coverage/           # Jest coverage reports (auto-generated)
+├─ jest.*              # Jest config and setup files
+├─ tsconfig*.json      # TypeScript configuration
+├─ postcss.config.mjs  # PostCSS configuration
+├─ next.config.mjs     # Next.js configuration
+└─ package.json        # Project metadata and scripts
+```
+
 
 ## Links
 
 - **Live Demo**: [https://course-catalog-pi.vercel.app/](https://course-catalog-pi.vercel.app/)
 - **Figma Design**: [https://www.figma.com/design/LNwLbU71rEpSwj6GB2bQoG/Course-Catalog?node-id=6-4&t=asL6Me7jeETIgOH7-0](https://www.figma.com/design/LNwLbU71rEpSwj6GB2bQoG/Course-Catalog?node-id=6-4&t=asL6Me7jeETIgOH7-0)
 
-## License
 
-Private project - All rights reserved.
