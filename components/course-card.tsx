@@ -36,11 +36,11 @@ export function CourseCard({ course }: CourseCardProps) {
       </CardHeader>
 
       <CardContent className="p-4 space-y-3 group-hover:bg-card/50 transition-[background-color] duration-200">
-        <h3 className="font-bold font-[family-name:var(--font-montserrat)] text-card-foreground line-clamp-2 group-hover:text-primary">
+        <h3 className="font-bold font-[family-name:var(--font-montserrat)] text-card-foreground line-clamp-1 group-hover:text-primary">
           {course.title}
         </h3>
 
-        <p className="text-sm text-muted-foreground font-[family-name:var(--font-open-sans)] line-clamp-3 group-hover:text-muted-foreground/80">
+        <p className="text-sm text-muted-foreground font-[family-name:var(--font-open-sans)] line-clamp-2 group-hover:text-muted-foreground/80">
           {course.description}
         </p>
 
@@ -77,3 +77,4 @@ export function CourseCard({ course }: CourseCardProps) {
     </Card>
   )
 }
+
