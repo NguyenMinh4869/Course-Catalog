@@ -142,21 +142,21 @@
 <a name='L77'></a><a href='#L77'>77</a>
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">205x</span>
-<span class="cline-any cline-yes">148x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -258,31 +258,31 @@ export function CourseCard({ course }: CourseCardProps) {
         &lt;/div&gt;
       &lt;/CardHeader&gt;
 &nbsp;
-      &lt;CardContent className="p-4 space-y-3 group-hover:bg-card/50 transition-colors duration-300"&gt;
-        &lt;h3 className="font-bold font-[family-name:var(--font-montserrat)] text-card-foreground line-clamp-2 group-hover:text-primary transition-colors duration-300"&gt;
+      &lt;CardContent className="p-4 space-y-3 group-hover:bg-card/50 transition-[background-color] duration-200"&gt;
+        &lt;h3 className="font-bold font-[family-name:var(--font-montserrat)] text-card-foreground line-clamp-2 group-hover:text-primary"&gt;
           {course.title}
         &lt;/h3&gt;
 &nbsp;
-        &lt;p className="text-sm text-muted-foreground font-[family-name:var(--font-open-sans)] line-clamp-3 group-hover:text-muted-foreground/80 transition-colors duration-300"&gt;
+        &lt;p className="text-sm text-muted-foreground font-[family-name:var(--font-open-sans)] line-clamp-3 group-hover:text-muted-foreground/80"&gt;
           {course.description}
         &lt;/p&gt;
 &nbsp;
         &lt;div className="flex items-center gap-4 text-xs text-muted-foreground"&gt;
           &lt;div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300 ease-out"&gt;
-            &lt;Clock className="h-3 w-3 group-hover:text-primary transition-colors duration-300" /&gt;
-            &lt;span className="group-hover:text-foreground transition-colors duration-300"&gt;{course.duration}&lt;/span&gt;
+            &lt;Clock className="h-3 w-3 group-hover:text-primary" /&gt;
+            &lt;span className="group-hover:text-foreground"&gt;{course.duration}&lt;/span&gt;
           &lt;/div&gt;
           &lt;div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-300 ease-out"&gt;
-            &lt;Users className="h-3 w-3 group-hover:text-primary transition-colors duration-300" /&gt;
-            &lt;span className="group-hover:text-foreground transition-colors duration-300"&gt;1.2k students&lt;/span&gt;
+            &lt;Users className="h-3 w-3 group-hover:text-primary" /&gt;
+            &lt;span className="group-hover:text-foreground"&gt;1.2k students&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
 &nbsp;
         {course.enrolled &amp;&amp; course.progress !== undefined &amp;&amp; (
           &lt;div className="space-y-2 group-hover:scale-[1.02] transition-transform duration-300 ease-out"&gt;
             &lt;div className="flex justify-between text-xs"&gt;
-              &lt;span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300"&gt;Progress&lt;/span&gt;
-              &lt;span className="font-medium text-foreground group-hover:text-primary transition-colors duration-300"&gt;{course.progress}%&lt;/span&gt;
+              &lt;span className="text-muted-foreground group-hover:text-foreground"&gt;Progress&lt;/span&gt;
+              &lt;span className="font-medium text-foreground group-hover:text-primary"&gt;{course.progress}%&lt;/span&gt;
             &lt;/div&gt;
             &lt;Progress 
               value={course.progress} 
@@ -292,7 +292,7 @@ export function CourseCard({ course }: CourseCardProps) {
         )}
       &lt;/CardContent&gt;
 &nbsp;
-      &lt;CardFooter className="p-4 pt-0 group-hover:bg-card/30 transition-colors duration-300"&gt;
+      &lt;CardFooter className="p-4 pt-0 group-hover:bg-card/30 transition-[background-color] duration-200"&gt;
         &lt;Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium group-hover:scale-105 group-hover:shadow-lg transition-all duration-300 ease-out" size="sm"&gt;
           {course.enrolled ? "Continue" : "Start Learning"}
         &lt;/Button&gt;
@@ -307,7 +307,7 @@ export function CourseCard({ course }: CourseCardProps) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-21T08:23:07.115Z
+                at 2025-09-22T21:51:06.372Z
             </div>
         <script src="../prettify.js"></script>
         <script>

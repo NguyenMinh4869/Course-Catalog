@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/10</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/10</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
@@ -126,12 +126,19 @@
 <a name='L61'></a><a href='#L61'>61</a>
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,10 +146,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,15 +208,14 @@ import { Search, X } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { useTheme } from "next-themes"
+ 
 &nbsp;
 interface HeaderProps {
-  searchQuery: string
-  onSearchChange: (query: string) =&gt; void
+  searchQuery: string //gia tri search hien tai
+  onSearchChange: (query: string) =&gt; void //function update search query
 }
 &nbsp;
 export function Header({ searchQuery, onSearchChange }: HeaderProps) {
-  const { theme } = useTheme()
   
   const handleClearSearch = () =&gt; {
     onSearchChange("")
@@ -214,16 +227,24 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
         &lt;div className="flex flex-col sm:flex-row items-center justify-between gap-4"&gt;
           {/* Logo Section */}
           &lt;div className="flex items-center flex-shrink-0 relative"&gt;
-            &lt;img    
-              src={theme === "dark" ? <span class="branch-0 cbranch-no" title="branch not covered" >"/Logo DarkMode.png" : "</span>/Logo.png"} 
-              alt="Sonic Logo" 
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
+            {/* Light logo */}
+            &lt;img
+              src="/Logo.png"
+              alt="Sonic Logo"
+              className="block dark:hidden w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
+            /&gt;
+            {/* Dark logo */}
+            &lt;img
+              src="/Logo DarkMode.png"
+              alt="Sonic Logo"
+              className="hidden dark:block w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain -my-4 sm:-my-6 md:-my-8 transition-all duration-500 ease-in-out hover:scale-105"
             /&gt;
           &lt;/div&gt;
 &nbsp;
           {/* Search Section */}
           &lt;div className="flex-1 w-full sm:max-w-lg sm:mx-4 lg:mx-8"&gt;
             &lt;div className="relative flex items-center"&gt;
+              {/* Search Icon */}
               &lt;Search className="absolute left-3 h-4 w-4 text-muted-foreground" /&gt;
               &lt;Input 
                 placeholder="Search courses..." 
@@ -259,7 +280,7 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-21T08:23:07.115Z
+                at 2025-09-22T21:51:06.372Z
             </div>
         <script src="../prettify.js"></script>
         <script>
